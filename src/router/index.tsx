@@ -5,6 +5,7 @@ import SBS from "../pages/SBS";
 import Home from "../pages/home";
 import Regulations from "../pages/regulations";
 import Liquidity from "../pages/liquidity";
+import Cemetery from "../pages/cemetery";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
       <Route path="/sbs" element={<SBS />} />
       <Route path="/regulations" element={<Regulations />} />
       <Route path="/liquidity" element={<Liquidity />} />
+      <Route path="/cemetery" element={<Cemetery />} />
     </Routes>
   );
 };

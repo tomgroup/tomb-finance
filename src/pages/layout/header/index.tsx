@@ -159,7 +159,7 @@ const Header = () => {
             </div>
           </Link>
 
-          <Link to="/playground">
+          <Link to="/cemetery">
             <div id="navbarItem2" onClick={() => ItemClick(2)}>
               Cemetery
             </div>
@@ -219,7 +219,7 @@ const Header = () => {
               Home
             </div>
           </Link>
-          <Link to="/playground">
+          <Link to="/cemetery">
             <div id="navbarItem2" onClick={() => ItemClick(2)}>
               Cemetery
             </div>
