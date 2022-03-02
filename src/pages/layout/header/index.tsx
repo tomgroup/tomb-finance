@@ -17,7 +17,6 @@ declare global {
 }
 
 const Header = () => {
-  const [showFlag, setShowFlag] = useState(false);
   const [address, setAddress] = useState("");
   const [y, setY] = useState(window.scrollY);
 

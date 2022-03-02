@@ -9,6 +9,9 @@ export const FooterContainer = styled.div`
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #121212;
+  @media (max-width: 505px) {
+    display: none;
+  }
   .container {
     width: 100%;
     display: block;

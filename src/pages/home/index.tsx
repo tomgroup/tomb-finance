@@ -1,14 +1,12 @@
-import React from "react";
-import Slider from "../../components/slider";
-import AboutUs from "./Aboutus";
-import Combine from "./Combine";
-import Description from "./Description";
-import GiveWay from "./GiveWay";
-import Mint from "./Mint";
-import Presale from "./Presale";
-import Question from "./Question";
-import "./home.css";
+import React, {useEffect} from "react";
+import bg from "../../assets/home.png";
+
 const Home = () => {
+  useEffect(() => {
+    document.body.style.backgroundImage = `url('${bg}')`;
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+  }, []);
   return (
     <>
       
