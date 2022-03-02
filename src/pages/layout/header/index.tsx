@@ -179,7 +179,7 @@ const Header = () => {
               SBS
             </div>
           </Link>
-          <Link to="/faq">
+          <Link to="/liquidity">
             <div id="navbarItem6" onClick={() => ItemClick(6)}>
               Liquidity
             </div>
@@ -239,7 +239,7 @@ const Header = () => {
               SBS
             </div>
           </Link>
-          <Link to="/faq">
+          <Link to="/liquidity">
             <div id="navbarItem6" onClick={() => ItemClick(6)}>
               Liquidity
             </div>
