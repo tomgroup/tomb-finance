@@ -9,6 +9,11 @@ export const HeaderContainer = styled.div`
   @media (min-width: 600px) {
     min-height: 64px;
   }
+  @media screen and (min-width: 1014px) {
+    .bm-menu-wrap {
+      display: none;
+    }
+  }
   /* transition: all 0.85s ease-in-out; */
   position: sticky;
   top: 0;
@@ -126,7 +131,39 @@ export const Navbar = styled.div`
     color: #e91e63;
   } */
 `;
-export const Span = styled.span``;
+export const ModalContainer = styled.div`
+  text-align: left;
+  h2 {
+    font-family: "Amarante",cursive !important;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  .wallet-content {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    img {
+      height: 35px;
+      width: 35px;
+
+    }
+    .description {
+      margin-left: 20px;
+      font-weight: 500;
+      line-height: 1.75;
+      font-size: 0.875rem;
+      color: #2c2560!important;
+      font-family: "Poppins",sans-serif!important;
+      font-size: 1.1rem!important;
+    }
+  }
+`;
 
 export const ConnectMenu = styled.div`
   display: flex;
