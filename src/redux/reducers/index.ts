@@ -1,18 +1,18 @@
 import { Action, ActionType } from "../actionTypes/index";
 
 interface State {
-  index: Number | null;
+  isModalOpen: boolean;
 }
 
 const initialState = {
-  index: null,
+  isModalOpen: false,
 };
 
-const colorReducer = (state: State = initialState, action: Action): State => {
+const ModalReducer = (state: State = initialState, action: Action): State => {
   switch (action.type) {
-    case ActionType.GET_COLOR_INDEX_SUCCESS:
+    case ActionType.GET_WALLTMODAL_OPEN:
       return {
-        index: action.payload,
+        isModalOpen: action.payload,
       };
 
     default:
@@ -20,4 +20,4 @@ const colorReducer = (state: State = initialState, action: Action): State => {
   }
 };
 
-export default colorReducer;
+export default ModalReducer;

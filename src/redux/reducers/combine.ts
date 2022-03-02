@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import colorReducer from "./index";
+import ModalReducer from "./index";
 
 const reducers = combineReducers({
-  color: colorReducer,
+  isModalOpen: ModalReducer,
 });
 
 export default reducers;

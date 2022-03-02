@@ -4,6 +4,7 @@ import styled from "styled-components";
 interface styledBtnProps {
   text: string;
   color: string;
+  onClick?: (e: any) => void;
 }
 const StyledButton = (props: styledBtnProps) => {
   const StyledButtonContainer = styled.button`

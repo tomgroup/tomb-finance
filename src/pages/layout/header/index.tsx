@@ -11,6 +11,7 @@ import {
 } from "./index.styled";
 import { slide as Menu } from "react-burger-menu";
 import Modal from "react-modal";
+import { setModal } from "../../../redux/actionCreators/setModal";
 import MetamaskIcon from "../../../assets/wallet_icon/metamask-fox.svg";
 import WalletIcon from "../../../assets/wallet_icon/wallet-connect.svg";
 import CoinbaseIcon from "../../../assets/wallet_icon/coinbase_logo.jpeg";
@@ -24,7 +25,6 @@ declare global {
 const Header = () => {
   const [address, setAddress] = useState("");
   const [y, setY] = useState(window.scrollY);
-
   const menuStyles = {
     bmBurgerButton: {
       position: "fixed",
@@ -85,7 +85,6 @@ const Header = () => {
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [menuIsOpen, setMenuOpen] = React.useState(false);
-
   const closeModal = () => {
     setIsOpen(false);
   };
