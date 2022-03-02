@@ -8,7 +8,6 @@ import {
   HeaderContent,
   MobileHeaderContent,
 } from "./index.styled";
-import { AiOutlineMenu, AiOutlineClose, AiOutlineLeft } from "react-icons/ai";
 import { slide as Menu } from 'react-burger-menu';
 
 declare global {
@@ -146,7 +145,7 @@ const Header = () => {
               Pit
             </div>
           </Link>
-          <Link to="/faq">
+          <Link to="/sbs">
             <div id="navbarItem5" onClick={() => ItemClick(5)}>
               SBS
             </div>
@@ -197,7 +196,7 @@ const Header = () => {
               Pit
               </div>
             </Link>
-            <Link to="/faq">
+            <Link to="/sbs">
               <div id="navbarItem5" onClick={() => ItemClick(5)}>
               SBS
               </div>
