@@ -184,7 +184,7 @@ const Header = () => {
               Liquidity
             </div>
           </Link>
-          <Link to="/faq">
+          <Link to="/regulations">
             <div id="navbarItem7" onClick={() => ItemClick(7)}>
               Regulations
             </div>
@@ -244,7 +244,7 @@ const Header = () => {
               Liquidity
             </div>
           </Link>
-          <Link to="/faq">
+          <Link to="/regulations">
             <div id="navbarItem7" onClick={() => ItemClick(7)}>
               Regulations
             </div>
