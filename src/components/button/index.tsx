@@ -4,6 +4,7 @@ import styled from "styled-components";
 interface styledBtnProps {
   text: string;
   color: string;
+  textColr: string;
   onClick?: (e: any) => void;
 }
 const StyledButton = (props: styledBtnProps) => {
@@ -21,7 +22,7 @@ const StyledButton = (props: styledBtnProps) => {
     line-height: 1.75;
     border-radius: 4px;
     text-transform: uppercase;
-    color: white;
+    color: ${props.textColr};
   `;
 
   return (

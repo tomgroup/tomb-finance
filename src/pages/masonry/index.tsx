@@ -12,7 +12,7 @@ const Masonry = () => {
   return (
     <Masonrycontainer>
       <div className="unlock-container">
-        <StyledButton text="UNLOCK" color="#571eb1" onClick={()=>{
+        <StyledButton text="UNLOCK" color="#571eb1" textColr="white" onClick={()=>{
           let element: HTMLElement = document.getElementById(
             "walletModal"
           ) as HTMLElement;
