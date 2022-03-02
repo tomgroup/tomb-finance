@@ -255,7 +255,7 @@ const Header = () => {
             </div>
           </a>
           <div className="connect__btn">
-            <Button onClick={() => Connect()}>
+            <Button onClick={() => Connect()} id="walletModal">
               {address !== "" ? address : "Connect"}
             </Button>
           </div>

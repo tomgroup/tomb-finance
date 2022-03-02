@@ -12,7 +12,12 @@ const SBS = () => {
   return (
     <SBScontainer>
       <div className="unlock-container">
-        <StyledButton text="UNLOOCK" color="#571eb1" onClick={()=>{console.log("here");}}/>
+        <StyledButton text="UNLOCK" color="#571eb1" onClick={()=>{
+          let element: HTMLElement = document.getElementById(
+            "walletModal"
+          ) as HTMLElement;
+          element.click();
+        }}/>
       </div>
     </SBScontainer>
   );
