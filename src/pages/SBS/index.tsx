@@ -12,7 +12,7 @@ const SBS = () => {
   return (
     <SBScontainer>
       <div className="unlock-container">
-        <StyledButton text="UNLOOCK" color="#571eb1" />
+        <StyledButton text="UNLOOCK" color="#571eb1" onClick={()=>{console.log("here");}}/>
       </div>
     </SBScontainer>
   );

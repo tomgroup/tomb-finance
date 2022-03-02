@@ -25,7 +25,7 @@ const StyledButton = (props: styledBtnProps) => {
   `;
 
   return (
-    <StyledButtonContainer>
+    <StyledButtonContainer onClick={props.onClick}>
       {props.text}
     </StyledButtonContainer>
   );
