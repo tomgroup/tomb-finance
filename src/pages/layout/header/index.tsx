@@ -76,10 +76,10 @@ const Header = () => {
     const handleNavigation = (e: any) => {
       const window = e.currentTarget;
       if (y > 10) {
-        document.getElementById("container")?.classList.add("scrollContainer");
+        document.getElementById("header")?.classList.add("scrollContainer");
       } else if (y <= 10) {
         document
-          .getElementById("container")
+          .getElementById("header")
           ?.classList.remove("scrollContainer");
       }
       setY(window.scrollY);
@@ -121,7 +121,7 @@ const Header = () => {
       ?.classList.add("activeNavbarItem");
   };
   return (
-    <HeaderContainer id="container">
+    <HeaderContainer id="header">
       <h2><a href="/">Tomb Finance</a></h2>
       <HeaderContent>
         <Navbar>
@@ -161,11 +161,11 @@ const Header = () => {
               Regulations
             </div>
           </Link>
-          <Link to="/faq">
+          <a href="https://docs.tomb.finance/">
             <div id="navbarItem8" onClick={() => ItemClick(8)}>
               Docs
             </div>
-          </Link>
+          </a>
         </Navbar>
         <ConnectMenu>
           <Button onClick={() => Connect()}>
@@ -212,11 +212,11 @@ const Header = () => {
               Regulations
               </div>
             </Link>
-            <Link to="/faq">
+            <a href="https://docs.tomb.finance/">
               <div id="navbarItem8" onClick={() => ItemClick(8)}>
               Docs
               </div>
-            </Link>
+            </a>
             <div className="connect__btn">
               <Button onClick={() => Connect()}>
                 {address !== "" ? address : "Connect"}

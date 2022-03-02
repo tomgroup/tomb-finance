@@ -23,6 +23,10 @@ body {
   background-attachment: fixed!important;
   background-size: cover!important;
 }
+.main-container {
+  position: relative;
+  min-height: 100vh; 
+}
 .activeNavbarItem {
   color: #ffffff !important;
 }

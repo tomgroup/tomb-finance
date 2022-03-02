@@ -1,7 +1,6 @@
 import styled from "styled-components";
+
 export const FooterContainer = styled.div`
-  display: flex;
-  color: white;
   width: 100%;
   bottom: 0;
   height: 1.3rem;

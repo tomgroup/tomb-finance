@@ -13,7 +13,7 @@ const Footer = () => {
   //   setYear(get_year);
   // }, []);
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <div className="container">
         <div className="copyright">
           Copyright © Tomb Finance 2022
