@@ -109,7 +109,7 @@ const Header = () => {
     document
       .getElementById("navbarItem" + 1)
       ?.classList.add("activeNavbarItem");
-    // metamaskConnect();
+    metamaskConnect();
   }, []);
 
   const metamaskConnect = () => {

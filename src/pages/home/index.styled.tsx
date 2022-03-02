@@ -30,13 +30,19 @@ export const Homecontainer = styled.div`
       max-width: 100%;
       flex-basis: 100%;
     }
-    
+
     @media (min-width: 600px) {
-      
       .MuiGrid-grid-sm-4 {
         flex-grow: 0;
         max-width: 33.333333%;
         flex-basis: 33.333333%;
+        display: flex;
+        justify-content: center;
+      }
+      .MuiGrid-grid-sm-6 {
+        flex-grow: 0;
+        max-width: 50%;
+        flex-basis: 50%;
         display: flex;
         justify-content: center;
       }
@@ -46,7 +52,7 @@ export const Homecontainer = styled.div`
         flex-basis: 66.666667%;
       }
     }
-    
+
     .cryptotomb-media {
       padding-top: 0px;
       position: relative;
@@ -66,6 +72,7 @@ export const Homecontainer = styled.div`
     }
     .welcome-panel {
       padding: 32px;
+      margin: 10px;
       box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
         0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
       border-radius: 4px;
@@ -85,23 +92,23 @@ export const Homecontainer = styled.div`
       }
     }
     .alert-panel {
-      padding: 20px;
+      padding: 32px;
       display: flex;
       justify-content: center;
-      .MuiPaper-root{
+      .MuiPaper-root {
         font-weight: 500;
         background-color: #ff9800;
         display: flex;
         padding: 6px 16px;
         font-size: 0.875rem;
-        font-family: "Poppins",sans-serif;
+        font-family: "Poppins", sans-serif;
         line-height: 1.43;
         border-radius: 4px;
         box-shadow: none;
         transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-        color: #2c2560!important;
+        color: #2c2560 !important;
         justify-content: center;
-        .MuiAlert-icon{
+        .MuiAlert-icon {
           display: flex;
           opacity: 0.9;
           padding: 7px 0;
@@ -128,6 +135,8 @@ export const Homecontainer = styled.div`
 
     .total-value-panel {
       padding: 32px;
+      margin: 10px;
+      width: 100%;
       box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
         0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
       border-radius: 4px;
@@ -146,9 +155,14 @@ export const Homecontainer = styled.div`
         -webkit-font-smoothing: antialiased;
         font-size: 25px;
       }
+
+      @media (max-width: 600px) {
+        width: auto;
+      }
     }
     .stake-panel {
       padding: 32px;
+      margin: 10px;
       box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
         0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
       border-radius: 4px;
@@ -163,6 +177,120 @@ export const Homecontainer = styled.div`
       button {
         margin-left: 20px;
         margin-right: 20px;
+      }
+    }
+
+    .tomb-price-panel {
+      padding: 32px;
+      margin: 10px;
+      width: 100%;
+      box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      border-radius: 4px;
+      color: #2c2560 !important;
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      background-color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      position: relative;
+      h2 {
+        margin: 0;
+        font-family: "Amarante", cursive !important;
+        font-size: 1.5em;
+      }
+      h3 {
+        margin: 0;
+        font-family: "Amarante", cursive !important;
+        font-size: 1em;
+      }
+      button {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        color: #571eb1;
+        border: 1px solid rgba(87, 30, 177, 0.5);
+        span {
+          width: 100%;
+          display: inherit;
+          align-items: inherit;
+          justify-content: inherit;
+          color: #571eb1;
+          display: flex;
+          img {
+            width: 20px;
+          }
+        }
+      }
+      .crypto_tomb_img {
+        background-color: rgb(255, 255, 255);
+        font-size: 36px;
+        height: 95px;
+        width: 95px;
+        display: flex;
+        border-radius: 40px;
+        justify-content: center;
+        box-shadow: rgb(224 224 224) 4px 4px 8px inset,
+          rgb(245 245 245) -6px -6px 12px inset;
+        margin: 0px auto 16px;
+      }
+      span {
+        margin-top: 10px;
+        font-family: "Poppins", sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        font-size: 12px;
+      }
+
+      @media (max-width: 600px) {
+        width: auto;
+      }
+    }
+    .tomb-lp-panel {
+      padding: 32px;
+      margin: 10px;
+      width: 100%;
+      box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      border-radius: 4px;
+      color: #2c2560 !important;
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      background-color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      position: relative;
+      h2 {
+        margin: 0;
+        font-family: "Amarante", cursive !important;
+        font-size: 1.5em;
+      }
+      h3 {
+        margin: 0;
+        font-family: "Amarante", cursive !important;
+        font-size: 1em;
+      }
+    
+      .crypto_tomb_img {
+        background-color: rgb(255, 255, 255);
+        font-size: 36px;
+        height: 95px;
+        width: 95px;
+        display: flex;
+        border-radius: 40px;
+        justify-content: center;
+        box-shadow: rgb(224 224 224) 4px 4px 8px inset,
+          rgb(245 245 245) -6px -6px 12px inset;
+        margin: 0px auto 16px;
+      }
+      .button-container {
+        position: relative;
+      }
+      span {
+        margin-top: 10px;
+        font-family: "Poppins", sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        font-size: 12px;
+      }
+
+      @media (max-width: 600px) {
+        width: auto;
       }
     }
   }
