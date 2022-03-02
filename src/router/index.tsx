@@ -1,21 +1,23 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import FAQ from "../pages/FAQ";
+import Pit from "../pages/pit";
 import SBS from "../pages/SBS";
 import Home from "../pages/home";
 import Regulations from "../pages/regulations";
 import Liquidity from "../pages/liquidity";
 import Cemetery from "../pages/cemetery";
+import Masonry from "../pages/masonry";
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/faq" element={<FAQ />} />
+      <Route path="/pit" element={<Pit />} />
       <Route path="/sbs" element={<SBS />} />
       <Route path="/regulations" element={<Regulations />} />
       <Route path="/liquidity" element={<Liquidity />} />
       <Route path="/cemetery" element={<Cemetery />} />
+      <Route path="/masonry" element={<Masonry />} />
     </Routes>
   );
 };

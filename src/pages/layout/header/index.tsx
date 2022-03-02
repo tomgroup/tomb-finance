@@ -164,12 +164,12 @@ const Header = () => {
               Cemetery
             </div>
           </Link>
-          <Link to="/collection">
+          <Link to="/masonry">
             <div id="navbarItem3" onClick={() => ItemClick(3)}>
               Masonry
             </div>
           </Link>
-          <Link to="/faq">
+          <Link to="/pit">
             <div id="navbarItem4" onClick={() => ItemClick(4)}>
               Pit
             </div>
@@ -224,12 +224,12 @@ const Header = () => {
               Cemetery
             </div>
           </Link>
-          <Link to="/collection">
+          <Link to="/masonry">
             <div id="navbarItem3" onClick={() => ItemClick(3)}>
               Masonry
             </div>
           </Link>
-          <Link to="/faq">
+          <Link to="/pit">
             <div id="navbarItem4" onClick={() => ItemClick(4)}>
               Pit
             </div>
