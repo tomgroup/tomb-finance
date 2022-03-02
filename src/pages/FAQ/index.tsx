@@ -11,9 +11,7 @@ import {
   PolygonTitle,
   PolygonContent,
 } from "./index.styled";
-import profile from "../../assets/nextimg/profile.png/256/75d76d.png";
-import logo1 from "../../assets/nextimg/bwpunks.png/256/75201f.png";
-import logo2 from "../../assets/chubbies63a9.gif";
+
 const FAQ = () => {
   return (
     <FAQContainer>
@@ -303,7 +301,6 @@ const FAQ = () => {
           <div>
             <PolygonTitle>What about profile pictures?</PolygonTitle>
             <PolygonContent>
-              <img src={profile} width="100px" height="100px" alt="profile" />
               <br />
               We will be providing a profile image png in the bot's detail page
               at launch. It will look like the png above.
@@ -352,10 +349,7 @@ const FAQ = () => {
           <div>
             <PolygonTitle>How do I claim free BittyBots?</PolygonTitle>
             <PolygonContent>
-              <div>
-                <img src={logo2} width="100px" height="" alt="logo" />
-                <img src={logo1} width="100px" height="" alt="logo" />
-              </div>
+           
               There's nothing to do! Nearly 10000 BittyBots have ALREADY been
               airdropped to{" "}
               <a href="https://chubbies.io" target="_blank" rel="noreferrer">
