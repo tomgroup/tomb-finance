@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import ModalReducer from "./index";
+import AddressReducer from "./index";
 
 const reducers = combineReducers({
-  isModalOpen: ModalReducer,
+  address: AddressReducer,
 });
 
 export default reducers;

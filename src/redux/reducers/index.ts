@@ -1,18 +1,18 @@
 import { Action, ActionType } from "../actionTypes/index";
 
 interface State {
-  isModalOpen: boolean;
+  address: string | null;
 }
 
 const initialState = {
-  isModalOpen: false,
+  address: "",
 };
 
-const ModalReducer = (state: State = initialState, action: Action): State => {
+const AddressReducer = (state: State = initialState, action: Action): State => {
   switch (action.type) {
-    case ActionType.GET_WALLTMODAL_OPEN:
+    case ActionType.SET_ADDRESS:
       return {
-        isModalOpen: action.payload,
+        address: action.payload,
       };
 
     default:
@@ -20,4 +20,4 @@ const ModalReducer = (state: State = initialState, action: Action): State => {
   }
 };
 
-export default ModalReducer;
+export default AddressReducer;

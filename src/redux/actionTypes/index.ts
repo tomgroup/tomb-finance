@@ -1,10 +1,10 @@
 export enum ActionType {
-  GET_WALLTMODAL_OPEN = "GET_WALLTMODAL_OPEN",
+  SET_ADDRESS = "SET_ADDRESS",
 }
 
 interface actionSuccess {
-  type: ActionType.GET_WALLTMODAL_OPEN;
-  payload: boolean;
+  type: ActionType.SET_ADDRESS;
+  payload: string;
 }
 
 export type Action = actionSuccess;

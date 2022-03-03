@@ -109,7 +109,7 @@ const Header = () => {
     document
       .getElementById("navbarItem" + 1)
       ?.classList.add("activeNavbarItem");
-    metamaskConnect();
+    // metamaskConnect();
   }, []);
 
   const metamaskConnect = () => {
@@ -122,6 +122,8 @@ const Header = () => {
           ethereum.selectedAddress.slice(0, 5) +
           "..." +
           ethereum.selectedAddress.slice(-3, -1);
+
+        console.log("metamask address", temp);
         setAddress(temp);
       })
       .catch((err: any) => console.log(err));

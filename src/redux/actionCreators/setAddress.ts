@@ -1,12 +1,12 @@
 import { Dispatch } from "redux";
 import { ActionType, Action } from "../actionTypes";
 
-export const setModal = (isOpen: boolean) => {
+export const setAddress = (address: string) => {
   return async (dispatch: Dispatch<Action>) => {
     
     dispatch({
-      type: ActionType.GET_WALLTMODAL_OPEN,
-      payload: isOpen,
+      type: ActionType.SET_ADDRESS,
+      payload: address,
     });
   };
 };
