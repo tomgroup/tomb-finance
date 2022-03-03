@@ -5,6 +5,7 @@ import {
   Navbar,
   ConnectMenu,
   Button,
+  WalletButton,
   HeaderContent,
   MobileHeaderContent,
   ModalContainer,
@@ -14,6 +15,13 @@ import Modal from "react-modal";
 import MetamaskIcon from "../../../assets/wallet_icon/metamask-fox.svg";
 import WalletIcon from "../../../assets/wallet_icon/wallet-connect.svg";
 import CoinbaseIcon from "../../../assets/wallet_icon/coinbase_logo.jpeg";
+import { useDispatch } from "react-redux";
+import { setAddress } from "../../../redux/actionCreators/setAddress";
+import { useTypedSelector } from "../../../hooks/useTypeSelector";
+
+import CryptoTombImg from "../../../assets/crypto_tomb_cash.svg";
+import CryptoTombShareImg from "../../../assets/crypto_tomb_share.svg";
+import CryptoTombBondImg from "../../../assets/crypto_tomb_bond.svg";
 
 declare global {
   interface Window {
@@ -22,7 +30,7 @@ declare global {
 }
 
 const Header = () => {
-  const [address, setAddress] = useState("");
+  const [addr, setAddr] = useState("");
   const [y, setY] = useState(window.scrollY);
   const menuStyles = {
     bmBurgerButton: {
@@ -81,13 +89,18 @@ const Header = () => {
       transform: "translate(-50%, -50%)",
     },
   };
-
+  const dispatch = useDispatch();
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [walletModalIsOpen, setWalletModalOpen] = React.useState(false);
+  
   const [menuIsOpen, setMenuOpen] = React.useState(false);
   const closeModal = () => {
     setIsOpen(false);
   };
-
+  const closeWalletModal = () => {
+    setWalletModalOpen(false);
+  };
+  const { address } = useTypedSelector((state) => state.address);
   useEffect(() => {
     const handleNavigation = (e: any) => {
       const window = e.currentTarget;
@@ -109,22 +122,24 @@ const Header = () => {
     document
       .getElementById("navbarItem" + 1)
       ?.classList.add("activeNavbarItem");
-    // metamaskConnect();
+
+    metamaskConnect();
   }, []);
 
   const metamaskConnect = () => {
     const { ethereum } = window;
+    console.log("store address", address);
     ethereum
       .enable()
       .then((s: any) => {
-        setAddress(ethereum.selectedAddress);
+        setAddr(ethereum.selectedAddress);
         let temp =
           ethereum.selectedAddress.slice(0, 5) +
           "..." +
-          ethereum.selectedAddress.slice(-3, -1);
+          ethereum.selectedAddress.slice(-4);
 
-        console.log("metamask address", temp);
-        setAddress(temp);
+        setAddr(temp);
+        dispatch(setAddress(temp));
       })
       .catch((err: any) => console.log(err));
   };
@@ -133,6 +148,10 @@ const Header = () => {
     setMenuOpen(false);
     setIsOpen(!modalIsOpen);
   };
+  const ShowWallet = () => {
+    setMenuOpen(false);
+    setWalletModalOpen(!walletModalIsOpen);
+  }
   const ItemClick = (e: number) => {
     for (let i = 1; i <= 8; i++) {
       document
@@ -198,9 +217,15 @@ const Header = () => {
           </a>
         </Navbar>
         <ConnectMenu>
-          <Button onClick={() => Connect()}>
-            {address !== "" ? address : "Connect"}
-          </Button>
+          {addr !== "" ? (
+            <WalletButton onClick={() => ShowWallet()}>
+              MY WALLET
+            </WalletButton>
+          ) : (
+            <Button onClick={() => Connect()}>
+              Connect
+            </Button>
+          )}
         </ConnectMenu>
       </HeaderContent>
 
@@ -257,9 +282,15 @@ const Header = () => {
             </div>
           </a>
           <div className="connect__btn">
-            <Button onClick={() => Connect()} id="walletModal">
-              {address !== "" ? address : "Connect"}
-            </Button>
+            {addr !== "" ? (
+              <WalletButton onClick={() => ShowWallet()} id="walletModal">
+                MY WELLET
+              </WalletButton>
+            ) : (
+              <Button onClick={() => Connect()} id="walletModal">
+                CONNECT
+              </Button>
+            )}
           </div>
         </MobileHeaderContent>
       </Menu>
@@ -273,16 +304,56 @@ const Header = () => {
         <ModalContainer>
           <h2>Connect Wallet</h2>
           <span className="wallet-content" onClick={metamaskConnect}>
-            <img src={MetamaskIcon} alt="metamask"/>
+            <img src={MetamaskIcon} alt="metamask" />
             <span className="description">Metamask</span>
           </span>
           <div className="wallet-content">
-            <img src={WalletIcon} alt="wallet"/>
+            <img src={WalletIcon} alt="wallet" />
             <span className="description">WalletConnect</span>
           </div>
           <div className="wallet-content">
-            <img src={CoinbaseIcon} alt="coinbase"/>
+            <img src={CoinbaseIcon} alt="coinbase" />
             <span className="description">Coinbase Wallet</span>
+          </div>
+        </ModalContainer>
+      </Modal>
+
+      <Modal
+        isOpen={walletModalIsOpen}
+        onRequestClose={closeWalletModal}
+        style={modalStyles}
+        contentLabel="My wallet"
+      >
+        <ModalContainer>
+          <h3>My Wallet</h3>
+          <div className="my__wallet">
+            <div className="my__wallet__item">
+              <img src={CryptoTombImg} alt="my_walet_item"/>
+              <div className="description">
+                <h2>
+                  {`0.0000`}
+                </h2>
+                {`TOMB Available`}
+              </div>
+            </div>
+            <div className="my__wallet__item">
+              <img src={CryptoTombImg} alt="my_walet_item"/>
+              <div className="description">
+                <h2>
+                  {`0.0000`}
+                </h2>
+                {`TSHARE Available`}
+              </div>
+            </div>
+            <div className="my__wallet__item">
+              <img src={CryptoTombImg} alt="my_walet_item"/>
+              <div className="description">
+                <h2>
+                  {`0.0000`}
+                </h2>
+                {`TBOND Available`}
+              </div>
+            </div>
           </div>
         </ModalContainer>
       </Modal>

@@ -143,11 +143,42 @@ export const ModalContainer = styled.div`
     margin-inline-end: 0px;
     font-weight: bold;
   }
+  h3 {
+    font-family: "Poppins",sans-serif!important;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(44, 37, 96) !important;
+  }
+  .my__wallet {
+    color: rgb(44, 37, 96) !important;
+    display: flex;
+    
+    justify-content: center;
+    margin-bottom: 24px;
+    &__item {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin: 0px 16px;
+      .description {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      img {
+        width: 64px;
+        aspect-ratio: auto 64 / 64;
+        height: 64px;
+      }
+    }
+  }
   .wallet-content {
     cursor: pointer;
     display: flex;
     align-items: center;
     padding: 5px;
+    width: 400px;
     img {
       height: 35px;
       width: 35px;
@@ -193,4 +224,28 @@ export const Button = styled.span`
   width: max-content;
   margin-left: auto;
   margin-right: auto;
+`;
+
+export const WalletButton = styled.span`
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  background-color: #d5d5d5;
+  font-family: Chivo;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 6px 16px;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  line-height: 1.75;
+  border-radius: 4px;
+  text-transform: capitalize;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  &:hover {
+    color: white;
+  }
 `;
