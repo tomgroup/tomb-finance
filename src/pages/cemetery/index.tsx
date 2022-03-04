@@ -9,6 +9,7 @@ import FTMlogobleImg from "../../assets/ftm_logo_blue.svg";
 import SmokeyImg from "../../assets/spooky.png";
 import SilbaImg from "../../assets/shiba_logo.svg";
 import ZooImg from "../../assets/zoo_logo.svg";
+import { useNavigate } from "react-router-dom";
 
 const Cemetery = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const Cemetery = () => {
     document.body.style.backgroundSize = "cover";
   }, []);
   const { address } = useTypedSelector((state) => state.address);
+  const navigate = useNavigate();
   return (
     <CemeteryContainer>
       {address !== "" ? 
@@ -41,7 +43,9 @@ const Cemetery = () => {
                 <img src={TbombFtmImg} alt="crypto cash" />
               </div>
               <div className="button-container">
-                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{}} />
+                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{
+                  navigate("/cemetery/TombFtmLPTShareRewardPool");
+                }} />
               </div>
             </div>
           </div>
@@ -54,7 +58,9 @@ const Cemetery = () => {
                 <img src={TshareFtmImg} alt="crypto cash" />
               </div>
               <div className="button-container">
-                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{}} />
+                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{
+                  navigate("/cemetery/TshareFtmLPTShareRewardPool");
+                }} />
               </div>
             </div>
           </div>
@@ -95,7 +101,9 @@ const Cemetery = () => {
                 <img src={TbombFtmImg} alt="crypto cash" />
               </div>
               <div className="button-container">
-                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{}} />
+                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{
+                  navigate("/cemetery/TshareFtmLPTShareRewardPool");
+                }} />
               </div>
             </div>
           </div>
@@ -115,7 +123,9 @@ const Cemetery = () => {
                 <img src={FTMlogobleImg} alt="crypto cash" />
               </div>
               <div className="button-container">
-                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{}} />
+                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{
+                  navigate("/cemetery/TombFtmRewardPool");
+                }} />
               </div>
             </div>
           </div>
@@ -129,7 +139,9 @@ const Cemetery = () => {
                 <img src={SmokeyImg} alt="crypto cash" />
               </div>
               <div className="button-container">
-                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{}} />
+                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{
+                  navigate("/cemetery/TombBooGenesisRewardPool");
+                }} />
               </div>
             </div>
           </div>
@@ -143,7 +155,9 @@ const Cemetery = () => {
                 <img src={SilbaImg} alt="crypto cash" />
               </div>
               <div className="button-container">
-                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{}} />
+                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{
+                  navigate("/cemetery/TombShibaGenesisRewardPool");
+                }} />
               </div>
             </div>
           </div>
@@ -157,7 +171,9 @@ const Cemetery = () => {
                 <img src={ZooImg} alt="crypto cash" />
               </div>
               <div className="button-container">
-                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{}} />
+                <StyledButton text="VIEW" color="#571eb1" textColr="white" onClick={()=>{
+                  navigate("/cemetery/TombZooGenesisRewardPool");
+                }} />
               </div>
             </div>
           </div>

@@ -7,6 +7,8 @@ import Regulations from "../pages/regulations";
 import Liquidity from "../pages/liquidity";
 import Cemetery from "../pages/cemetery";
 import Masonry from "../pages/masonry";
+import SubCemetry from "../pages/subcemetry";
+
 
 const Router = () => {
   return (
@@ -18,6 +20,7 @@ const Router = () => {
       <Route path="/liquidity" element={<Liquidity />} />
       <Route path="/cemetery" element={<Cemetery />} />
       <Route path="/masonry" element={<Masonry />} />
+      <Route path="/cemetery/:name" element={<SubCemetry />} />
     </Routes>
   );
 };
