@@ -6,9 +6,6 @@ import { useTypedSelector } from "../../hooks/useTypeSelector";
 
 import CryptoTombImg from "../../assets/crypto_tomb_cash.svg";
 import CryptoTombShareImg from "../../assets/crypto_tomb_share.svg";
-import CryptoTombBondImg from "../../assets/crypto_tomb_bond.svg";
-import TbombFtmImg from "../../assets/tomb_ftm_lp.png";
-import TshareFtmImg from "../../assets/tshare_ftm_lp.png";
 
 const Masonry = () => {
   const { address } = useTypedSelector((state) => state.address);
@@ -128,8 +125,8 @@ const Masonry = () => {
               <div className="crypto_tomb_img">
                 <img src={CryptoTombImg} alt="crypto cash" />
               </div>
-              <h3>≈ $0.00</h3>
-              TSHARE Earned <br/><br/><br/><br/>
+              <h3>{`≈ $0.00`}</h3>
+              {`TSHARE Earned`} <br/><br/><br/><br/>
               <div className="button-container">
                 <StyledButton text="CLAIM REWARD" color="#CDCDCD" textColr="white" onClick={()=>{}} />
               </div>
@@ -141,8 +138,8 @@ const Masonry = () => {
               <div className="crypto_tomb_img">
                 <img src={CryptoTombShareImg} alt="crypto cash" />
               </div>
-              <h3>≈ $0.00</h3>
-              TSHARE Staked <br/><br/><br/><br/>
+              <h3>{`≈ $0.00`}</h3>
+              {`TSHARE Staked`} <br/><br/><br/><br/>
               <div className="button-container">
                 <StyledButton text="APPROVE TSHERE" color="#571eb1" textColr="white" onClick={()=>{}} />
               </div>
