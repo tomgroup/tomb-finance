@@ -148,6 +148,11 @@ const Masonry = () => {
 
           <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 ">
           </div>
+          <div className="MuiGrid-grid-xs-12">
+            <div className="button-container">
+              <StyledButton text="CLAIM AND WITHDRAW" color="#CDCDCD" textColr="white" onClick={()=>{}} />
+            </div>
+          </div>
 
         </div>
       ) : (
