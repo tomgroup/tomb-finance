@@ -128,7 +128,7 @@ const Header = () => {
 
   const metamaskConnect = () => {
     const { ethereum } = window;
-    console.log("store address", address);
+    // console.log("store address", address);
     ethereum
       .enable()
       .then((s: any) => {
