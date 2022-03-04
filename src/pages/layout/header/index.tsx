@@ -337,7 +337,7 @@ const Header = () => {
               </div>
             </div>
             <div className="my__wallet__item">
-              <img src={CryptoTombImg} alt="my_walet_item"/>
+              <img src={CryptoTombShareImg} alt="my_walet_item"/>
               <div className="description">
                 <h2>
                   {`0.0000`}
@@ -346,7 +346,7 @@ const Header = () => {
               </div>
             </div>
             <div className="my__wallet__item">
-              <img src={CryptoTombImg} alt="my_walet_item"/>
+              <img src={CryptoTombBondImg} alt="my_walet_item"/>
               <div className="description">
                 <h2>
                   {`0.0000`}
