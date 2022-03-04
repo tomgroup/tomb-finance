@@ -13,6 +13,7 @@ export const HeaderContainer = styled.div`
     .bm-menu-wrap {
       display: none;
     }
+    position: fixed;
   }
   /* transition: all 0.85s ease-in-out; */
   position: sticky;
