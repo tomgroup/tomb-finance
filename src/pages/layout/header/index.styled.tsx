@@ -8,12 +8,12 @@ export const HeaderContainer = styled.div`
   background-color: #121212;
   @media (min-width: 600px) {
     min-height: 64px;
+    position: fixed !important;
   }
   @media screen and (min-width: 1014px) {
     .bm-menu-wrap {
       display: none;
     }
-    position: fixed !important;
   }
   /* transition: all 0.85s ease-in-out; */
   position: sticky;
