@@ -10,7 +10,7 @@ export const SBScontainer = styled.div`
   padding-left: 16px;
   padding-right: 16px;
 
-  @media (min-width: 600px) {
+  @media (min-width: 850px) {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -56,7 +56,7 @@ export const SBScontainer = styled.div`
       }
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 850px) {
       .MuiGrid-grid-sm-4 {
         flex-grow: 0;
         max-width: 33.333333%;
@@ -189,7 +189,7 @@ export const SBScontainer = styled.div`
         text-align: right;
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: 850px) {
         width: auto;
       }
     }
