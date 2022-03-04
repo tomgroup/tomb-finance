@@ -280,6 +280,10 @@ export const Homecontainer = styled.div`
         font-family: "Amarante", cursive !important;
         font-size: 1.5em;
       }
+      img {
+        width: 95px !important;
+        height: 95px !important;
+      }
       h3 {
         margin: 0;
         font-family: "Amarante", cursive !important;
