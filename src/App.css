@@ -49,3 +49,8 @@ body {
   outline: none;
   padding: 32px;
 }
+
+.bm-overlay {
+  top: 0px;
+  left: 0px;
+}
