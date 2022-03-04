@@ -56,7 +56,7 @@ export const SubCemetrycontainer = styled.div`
     }
 
     @media (min-width: 600px) {
-      .MuiGrid-grid-sm-4 {
+      .MuiGrid-grid-sm-3 {
         flex-grow: 0;
         max-width: 33.333333%;
         flex-basis: 33.333333%;
@@ -65,8 +65,8 @@ export const SubCemetrycontainer = styled.div`
       }
       .MuiGrid-grid-sm-6 {
         flex-grow: 0;
-        max-width: 50%;
-        flex-basis: 50%;
+        max-width: 60%;
+        flex-basis: 60%;
         display: flex;
         justify-content: center;
       }
@@ -139,6 +139,25 @@ export const SubCemetrycontainer = styled.div`
 
       @media (max-width: 600px) {
         width: auto;
+      }
+    }
+
+    .subcemetry-bottom-panel {
+      padding: 25px;
+      margin: 10px;
+      box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      border-radius: 4px;
+      color: #2c2560 !important;
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      background-color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      position: relative;
+      text-align: center;
+      a {
+        font-weight: 700;
+        text-decoration: none;
+        color: rgb(144, 144, 255);
       }
     }
 

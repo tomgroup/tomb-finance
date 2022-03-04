@@ -6,6 +6,12 @@ import { useTypedSelector } from "../../hooks/useTypeSelector";
 import { useParams} from "react-router-dom";
 import CryptoTombImg from "../../assets/crypto_tomb_cash.svg";
 import CryptoTombShareImg from "../../assets/crypto_tomb_share.svg";
+import ZoologoImg from "../../assets/zoo_logo.svg";
+import ShibalogoImg from "../../assets/shiba_logo.svg";
+import FtmlogoImg from "../../assets/ftm_logo_blue.svg";
+import SpookyImg from "../../assets/spooky.png";
+import TombFtmImg from "../../assets/tomb_ftm_lp.png";
+import TshareFtmImg from "../../assets/tshare_ftm_lp.png";
 
 const data: { [key: string]: any } = {
   "TombZooGenesisRewardPool": {
@@ -14,6 +20,20 @@ const data: { [key: string]: any } = {
     apr: "0.00 %",
     daily_apr: "0.00 %",
     tvl: "$105.02",
+    left: {
+      src: CryptoTombImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TOMB Earned"
+    },
+    right: {
+      src: ZoologoImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "ZOO Staked",
+      buttonText: "APPROVE ZOO",
+    },
+    bottom: false
   },
   "TombShibaGenesisRewardPool": {
     title: "Earn TOMB by SHIBA",
@@ -21,6 +41,20 @@ const data: { [key: string]: any } = {
     apr: "0.00 %",
     daily_apr: "0.00 %",
     tvl: "$0.00",
+    left: {
+      src: CryptoTombImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TOMB Earned"
+    },
+    right: {
+      src: ShibalogoImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "SHIBA Staked",
+      buttonText: "APPROVE SHIBA",
+    },
+    bottom: false
   },
   "TombFtmRewardPool": {
     title: "Earn TOMB by FTM",
@@ -28,6 +62,20 @@ const data: { [key: string]: any } = {
     apr: "0.00 %",
     daily_apr: "0.00 %",
     tvl: "$0.26",
+    left: {
+      src: CryptoTombImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TOMB Earned"
+    },
+    right: {
+      src: FtmlogoImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "WFTM Staked",
+      buttonText: "APPROVE WFTM",
+    },
+    bottom: false
   },
   "TombBooGenesisRewardPool": {
     title: "Earn TOMB by BOO",
@@ -35,6 +83,20 @@ const data: { [key: string]: any } = {
     apr: "0.00 %",
     daily_apr: "0.00 %",
     tvl: "$0.00",
+    left: {
+      src: CryptoTombImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TOMB Earned"
+    },
+    right: {
+      src: SpookyImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "BOO Staked",
+      buttonText: "APPROVE BOO",
+    },
+    bottom: false
   },
   "TombFtmLPTShareRewardPool": {
     title: "Earn TSHARE by TOMB-FTM LP",
@@ -42,6 +104,20 @@ const data: { [key: string]: any } = {
     apr: "89.20%",
     daily_apr: "0.24%",
     tvl: "$274044334.02",
+    left: {
+      src: CryptoTombShareImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TSHARE Earned"
+    },
+    right: {
+      src: TombFtmImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TOMB-FTM-LP Staked",
+      buttonText: "APPROVE TOMB-FTM-LP",
+    },
+    bottom: true
   },
   "TshareFtmLPTShareRewardPool": {
     title: "Earn TSHARE by TSHARE-FTM LP",
@@ -49,6 +125,20 @@ const data: { [key: string]: any } = {
     apr: "179.40%",
     daily_apr: "0.49%",
     tvl: "$92183907.43",
+    left: {
+      src: CryptoTombShareImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TSHARE Earned"
+    },
+    right: {
+      src: TshareFtmImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TSHARE-FTM-LP Staked",
+      buttonText: "APPROVE TSHARE-FTM-LP",
+    },
+    bottom: true
   },
   "TombFtmLpTombRewardPool": {
     title: "Earn TOMB by TOMB-FTM LP",
@@ -56,6 +146,20 @@ const data: { [key: string]: any } = {
     apr: "0.00 %",
     daily_apr: "0.00 %",
     tvl: "$1630.95",
+    left: {
+      src: CryptoTombImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TOMB Earned"
+    },
+    right: {
+      src: TombFtmImg,
+      total: "0.0000",
+      earned: "0.00",
+      text: "TOMB-FTM-LP Staked",
+      buttonText: "APPROVE TOMB-FTM-LP",
+    },
+    bottom: true
   }
 }
 
@@ -111,13 +215,13 @@ const SubCemetry = () => {
           <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-4">
             <div className="tomb-lp-panel">
               <div className="crypto_tomb_img">
-                <img src={CryptoTombImg} alt="crypto cash" />
+                <img src={data[datakey].left.src} alt="crypto cash" />
               </div>
-              <h2>{`0.0000`}</h2>
-              <h3>{`≈ $0.00`}</h3>
-              {`TSHARE Earned`} <br/><br/><br/><br/>
+              <h2>{data[datakey].left.total}</h2>
+              <h3>{`≈ $${data[datakey].left.earned}`}</h3>
+              {data[datakey].left.text} <br/><br/><br/><br/>
               <div className="button-container">
-                <StyledButton text="CLAIM REWARD" color="#CDCDCD" textColr="white" onClick={()=>{}} />
+                <StyledButton text="CLAIM" color="#CDCDCD" textColr="white" onClick={()=>{}} />
               </div>
             </div>
           </div>
@@ -125,19 +229,34 @@ const SubCemetry = () => {
           <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-4">
             <div className="tomb-lp-panel">
               <div className="crypto_tomb_img">
-                <img src={CryptoTombShareImg} alt="crypto cash" />
+                <img src={data[datakey].right.src} alt="crypto cash" />
               </div>
-              <h2>{`0.0000`}</h2>
-              <h3>{`≈ $0.00`}</h3>
-              {`TSHARE Staked`} <br/><br/><br/><br/>
+              <h2>{data[datakey].right.total}</h2>
+              <h3>{data[datakey].right.earned}</h3>
+              {data[datakey].right.text} <br/><br/><br/><br/>
               <div className="button-container">
-                <StyledButton text="APPROVE TSHERE" color="#571eb1" textColr="white" onClick={()=>{}} />
+                <StyledButton text={data[datakey].right.buttonText} color="#571eb1" textColr="white" onClick={()=>{}} />
               </div>
             </div>
           </div>
 
           <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 ">
           </div>
+
+          <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-5"></div>
+          <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-6">
+            {data[datakey].bottom ? 
+            (
+            <div className="subcemetry-bottom-panel">
+              <a href="https://spookyswap.finance/add/FTM/0x6c021Ae822BEa943b2E66552bDe1D2696a53fbB7" target="_blank">
+                {`👻 Provide liquidity for TOMB-FTM pair now on SpookySwap 👻`}
+              </a>
+            </div>
+            ) : (<></>)
+            }
+          </div>
+          <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-5"></div>
+
           <div className="MuiGrid-grid-xs-12">
             <div className="button-container">
               <StyledButton text="CLAIM & WITHDRAW" color="#571eb1" textColr="white" onClick={()=>{}} />
