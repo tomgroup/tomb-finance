@@ -88,7 +88,7 @@ const Home = () => {
           <div className="tomb-price-panel">
             <h2>TOMB</h2>
             <button>
-              <span>+ <img src={MetamaskIcon} alt="metamask" /></span>
+              <span>+ &nbsp;<img src={MetamaskIcon} alt="metamask" /></span>
             </button>
             <div className="crypto_tomb_img">
               <img src={CryptoTombImg} alt="crypto cash" />
@@ -104,7 +104,7 @@ const Home = () => {
           <div className="tomb-price-panel">
             <h2>TSHARE</h2>
             <button>
-              <span>+ <img src={MetamaskIcon} alt="metamask" /></span>
+              <span>+ &nbsp;<img src={MetamaskIcon} alt="metamask" /></span>
             </button>
             <div className="crypto_tomb_img">
               <img src={CryptoTombShareImg} alt="crypto cash" />
@@ -117,10 +117,10 @@ const Home = () => {
         </div>
 
         <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-4">
-          <div className="tomb-lp-panel">
+          <div className="tomb-price-panel">
             <h2>TBOND</h2>
             <button>
-              <span>+ <img src={MetamaskIcon} alt="metamask" /></span>
+              <span>+ &nbsp;<img src={MetamaskIcon} alt="metamask" /></span>
             </button>
             <div className="crypto_tomb_img">
               <img src={CryptoTombBondImg} alt="crypto cash" />

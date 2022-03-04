@@ -9,7 +9,7 @@ export const Homecontainer = styled.div`
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
-  @media (min-width: 600px) {
+  @media (min-width: 950px) {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -31,7 +31,7 @@ export const Homecontainer = styled.div`
       flex-basis: 100%;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 950px) {
       .MuiGrid-grid-sm-4 {
         flex-grow: 0;
         max-width: 33.333333%;
@@ -156,12 +156,11 @@ export const Homecontainer = styled.div`
         font-size: 25px;
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: 950px) {
         width: auto;
       }
     }
     .stake-panel {
-      padding: 32px;
       margin: 10px;
       box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
         0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
@@ -174,9 +173,11 @@ export const Homecontainer = styled.div`
       justify-content: center;
       align-items: center;
       padding: 50px;
+    
       button {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 100%;
       }
     }
 
@@ -209,15 +210,27 @@ export const Homecontainer = styled.div`
         right: 10px;
         color: #571eb1;
         border: 1px solid rgba(87, 30, 177, 0.5);
+        border-radius: 4px;
+        padding: 8px 20px;
         span {
           width: 100%;
           display: inherit;
-          align-items: inherit;
-          justify-content: inherit;
-          color: #571eb1;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.875rem;
+          font-family: "Poppins",sans-serif;
+          font-weight: 500;
+          line-height: 1.75;
+          color: #571eb1 !important;
           display: flex;
           img {
             width: 20px;
+          }
+        }
+        &:hover{
+          background-color: rgba(87, 30, 177, 0.08);
+          span {
+            color: #fff!important;
           }
         }
       }
@@ -234,13 +247,12 @@ export const Homecontainer = styled.div`
         margin: 0px auto 16px;
       }
       span {
-        margin-top: 10px;
         font-family: "Poppins", sans-serif !important;
         -webkit-font-smoothing: antialiased;
         font-size: 12px;
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: 950px) {
         width: auto;
       }
     }
@@ -289,7 +301,7 @@ export const Homecontainer = styled.div`
         font-size: 12px;
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: 950px) {
         width: auto;
       }
     }
