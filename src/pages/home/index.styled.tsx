@@ -179,6 +179,13 @@ export const Homecontainer = styled.div`
         margin-right: 5px;
         width: 100%;
       }
+
+      @media (max-width: 500px) {
+        padding: 30px;
+        button {
+          font-size: 0.5rem;
+        }
+      }
     }
 
     .tomb-price-panel {

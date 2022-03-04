@@ -53,6 +53,9 @@ export const CemeteryContainer = styled.div`
         margin-bottom: 0.35em;
         color: #FFF;
         text-align: left;
+        @media (max-width: 850px) {
+          text-align: center;
+        }
       }
     }
 

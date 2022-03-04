@@ -95,10 +95,11 @@ export const MobileHeaderContent = styled.div`
       text-decoration: none;
       transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
       div {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-family: "Poppins",sans-serif;
         font-weight: 400;
         line-height: 1.5;
+        color: black;
       }
     }
 
