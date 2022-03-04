@@ -95,7 +95,8 @@ export const CemeteryContainer = styled.div`
         box-shadow: none;
         transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         color: #2c2560 !important;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: left;
         .MuiAlert-icon {
           display: flex;
           opacity: 0.9;

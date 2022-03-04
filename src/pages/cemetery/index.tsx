@@ -79,14 +79,7 @@ const Cemetery = () => {
                 </div>
                 <div className="MuiAlert-message">
                   <b>
-                    Please visit our{" "}
-                    <a
-                      target="_blank"
-                      href="https://docs.tomb.finance"
-                    >
-                      documentation
-                    </a>{" "}
-                    before purchasing TOMB or TSHARE!
+                    All below pools have ended. Please unstake and collect your rewards
                   </b>
                 </div>
               </div>
