@@ -135,5 +135,53 @@ export const Pitcontainer = styled.div`
         width: auto;
       }
     }
+    .ftm-panel-container {
+      width: 100%;
+    }
+    .ftm-panel {
+      padding: 32px 32px 5px 32px;
+      margin: 10px;
+      box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      border-radius: 4px;
+      color: #2c2560 !important;
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      background-color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      position: relative;
+    
+      h3 {
+        margin: 0;
+        font-family: "Poppins",sans-serif!important;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      &__img {
+        align-items: center;
+        display: flex;
+        margin-bottom: 5px;
+        justify-content: center;
+        &__svg {
+          padding-left: 16px;
+          padding-right: 16px;
+          width: 20px;
+          margin-top: -60px;
+        }
+      }
+      .crypto_tomb_img {
+        background-color: rgb(33, 33, 33);
+        font-size: 36px;
+        height: 72px;
+        width: 72px;
+        display: flex;
+        border-radius: 36px;
+        justify-content: center;
+        margin: 0px auto 16px;
+      }
+
+      @media (max-width: 600px) {
+        width: auto;
+      }
+    }
   }
 `;

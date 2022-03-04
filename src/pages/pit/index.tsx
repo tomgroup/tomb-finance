@@ -29,14 +29,14 @@ const Pit = () => {
 
           <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-4">
             <div className="pit-panel">
-              <h3>Purchase TBOND</h3>
+              <h3>{`Purchase TBOND`}</h3>
 
               <div className="pit-panel__img">
                 <div>
                   <div className="crypto_tomb_img">
                     <img src={CryptoTombImg} alt="crypto cash" />
                   </div>
-                  <h3>TOMB</h3>
+                  <h3>{`TOMB`}</h3>
                 </div>
                 <div className="pit-panel__img__svg">
                   <svg
@@ -58,13 +58,13 @@ const Pit = () => {
                   <div className="crypto_tomb_img">
                     <img src={CryptoTombBondImg} alt="crypto cash" />
                   </div>
-                  <h3>TBOND</h3>
+                  <h3>{`TBOND`}</h3>
                 </div>
               </div>
-              <p>7676106.4137 TBOND available for purchase</p>
+              <p>{`7676106.4137 TBOND available for purchase`}</p>
               <div className="button-container">
                 <StyledButton
-                  text="ZAP IN"
+                  text="APPROVE TOMB"
                   color="#571eb1"
                   textColr="white"
                   onClick={() => {}}
@@ -74,54 +74,21 @@ const Pit = () => {
           </div>
 
           <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-4">
-            <div className="pit-panel">
-              <h3>Purchase TBOND</h3>
-
-              <div className="pit-panel__img">
-                <div>
-                  <div className="crypto_tomb_img">
-                    <img src={CryptoTombImg} alt="crypto cash" />
-                  </div>
-                  <h3>TOMB</h3>
-                </div>
-                <div className="pit-panel__img__svg">
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="arrow-right"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <div className="crypto_tomb_img">
-                    <img src={CryptoTombBondImg} alt="crypto cash" />
-                  </div>
-                  <h3>TBOND</h3>
-                </div>
+            <div className="ftm-panel-container">
+              <div className="ftm-panel">
+                <h3>{`💰 TOMB = 0.9767 FTM`}</h3>
+                <p>Last-Hour TWAP Price</p>
               </div>
-              <p>7676106.4137 TBOND available for purchase</p>
-              <div className="button-container">
-                <StyledButton
-                  text="ZAP IN"
-                  color="#571eb1"
-                  textColr="white"
-                  onClick={() => {}}
-                />
+              <div className="ftm-panel">
+                <h3>{`💰 TBOND = 0.98 FTM`}</h3>
+                <p>{`Current Price: (TOMB)^2`}</p>
               </div>
             </div>
           </div>
 
           <div className="MuiGrid-grid-xs-12 MuiGrid-grid-sm-4">
             <div className="pit-panel">
-              <h3>Purchase TBOND</h3>
+              <h3>{`Redeem TOMB`}</h3>
 
               <div className="pit-panel__img">
                 <div>
@@ -156,8 +123,8 @@ const Pit = () => {
               <p>{`0.0000 TBOND Available in wallet`}</p>
               <div className="button-container">
                 <StyledButton
-                  text="ZAP IN"
-                  color="#571eb1"
+                  text="Enabled when TOMB > 1.01FTM"
+                  color="#CDCDCD"
                   textColr="white"
                   onClick={() => {}}
                 />
