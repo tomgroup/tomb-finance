@@ -49,7 +49,11 @@ body {
   outline: none;
   padding: 32px;
 }
-
+@media screen and (max-width: 600px) {
+  .ReactModal__Content--after-open {
+    width: 80% !important;
+  }
+}
 .bm-overlay {
   top: 0px;
   left: 0px;
