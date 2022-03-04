@@ -8,7 +8,7 @@ export const HeaderContainer = styled.div`
   background-color: #121212;
   @media (min-width: 600px) {
     min-height: 64px;
-    position: fixed !important;
+    
   }
   @media screen and (min-width: 1014px) {
     .bm-menu-wrap {
@@ -50,6 +50,7 @@ export const HeaderContainer = styled.div`
     justify-content: space-between;
     padding: 0 20px;
     box-sizing: border-box;
+    position: fixed !important;
     .bm-burger-button {
       display: inline-block;
       z-index: 10;
